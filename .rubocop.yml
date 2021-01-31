@@ -1,0 +1,6 @@
+# comment not only english
+Style/AsciiComments:
+  Enabled: false
+# disable frozen_string_literal
+Style/FrozenStringLiteralComment:
+  Enabled: false
