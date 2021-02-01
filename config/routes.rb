@@ -1,5 +1,22 @@
 Rails.application.routes.draw do
 
+
+
+
+  namespace :mini do
+    mount_devise_token_auth_for 'MiniUser', at: 'users', controllers: {
+      sessions: 'mini/sessions',
+    }
+
+    resources :users, only: [:update]
+
+  end
+
+
+  resources :mini_users
+
+  resource :wechat, only: [:show, :create]
+
   get '/', to: 'home#index'
 
   get 'home/index'

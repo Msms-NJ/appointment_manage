@@ -24,6 +24,8 @@ module AppointmentManage
     # in config/environments, which are processed later.
     #
     # config.time_zone = "Central Time (US & Canada)"
+    # 配置北京时区
+    config.time_zone = "Beijing"
     # config.eager_load_paths << Rails.root.join("extras")
   end
 end

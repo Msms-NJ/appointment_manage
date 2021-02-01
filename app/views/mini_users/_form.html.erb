@@ -1,0 +1,52 @@
+<%= form_with(model: mini_user) do |form| %>
+  <% if mini_user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mini_user.errors.count, "error") %> prohibited this mini_user from being saved:</h2>
+
+      <ul>
+        <% mini_user.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :openid %>
+    <%= form.text_field :openid %>
+  </div>
+
+  <div class="field">
+    <%= form.label :nick_name %>
+    <%= form.text_field :nick_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :gender %>
+    <%= form.number_field :gender %>
+  </div>
+
+  <div class="field">
+    <%= form.label :province %>
+    <%= form.text_field :province %>
+  </div>
+
+  <div class="field">
+    <%= form.label :country %>
+    <%= form.text_field :country %>
+  </div>
+
+  <div class="field">
+    <%= form.label :avatar_url %>
+    <%= form.text_field :avatar_url %>
+  </div>
+
+  <div class="field">
+    <%= form.label :unionid %>
+    <%= form.text_field :unionid %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Open:</strong>
+  <%= @mini_user.openid %>
+</p>
+
+<p>
+  <strong>Nick name:</strong>
+  <%= @mini_user.nick_name %>
+</p>
+
+<p>
+  <strong>Gender:</strong>
+  <%= @mini_user.gender %>
+</p>
+
+<p>
+  <strong>Province:</strong>
+  <%= @mini_user.province %>
+</p>
+
+<p>
+  <strong>Country:</strong>
+  <%= @mini_user.country %>
+</p>
+
+<p>
+  <strong>Avatar url:</strong>
+  <%= @mini_user.avatar_url %>
+</p>
+
+<p>
+  <strong>Unionid:</strong>
+  <%= @mini_user.unionid %>
+</p>
+
+<%= link_to 'Edit', edit_mini_user_path(@mini_user) %> |
+<%= link_to 'Back', mini_users_path %>

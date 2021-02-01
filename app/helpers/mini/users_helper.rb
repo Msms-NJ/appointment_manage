@@ -1,0 +1,2 @@
+module Mini::UsersHelper
+end

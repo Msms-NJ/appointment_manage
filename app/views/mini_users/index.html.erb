@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<%= render 'page_title' %>
+
+<%= render 'breadcrumb' %>
+
+<table class="table table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>OpenId</th>
+      <th>UnionId</th>
+      <th>用户昵称</th>
+      <th>用户性别</th>
+      <th>省份</th>
+      <th>国家</th>
+<!--      <th>Avatar url</th>-->
+      <th colspan="3">操作</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mini_users.each do |mini_user| %>
+      <tr>
+        <td><%= mini_user.openid %></td>
+        <td><%= mini_user.unionid %></td>
+        <td><%= mini_user.nick_name %></td>
+        <td><%= mini_user.gender %></td>
+        <td><%= mini_user.province %></td>
+        <td><%= mini_user.country %></td>
+<!--        <td><%#= mini_user.avatar_url %></td>-->
+
+        <td><%= link_to 'Show', mini_user %></td>
+        <td><%= link_to 'Edit', edit_mini_user_path(mini_user) %></td>
+        <td><%= link_to 'Destroy', mini_user, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<%= paginate @mini_users %>
+
+<br>
+
+<%= link_to 'New Mini User', new_mini_user_path %>
